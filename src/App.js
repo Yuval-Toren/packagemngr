@@ -1,13 +1,8 @@
 import React from 'react';
 import './App.css';
-import {Button, Grid, Paper, } from '@material-ui/core';
+import clsx from 'clsx';
+import {Button, Grid,} from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import FolderIcon from '@material-ui/icons/Folder';
-import RestoreIcon from '@material-ui/icons/Restore';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -29,9 +24,9 @@ const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
   root: {
-    //display: 'flex',
+    display: 'flex',
     flexGrow: 1,
-    width: 500,
+   
   },
   paper: {
     padding: theme.spacing(1),
@@ -92,7 +87,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function NestedGrid() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -109,60 +103,95 @@ export default function NestedGrid() {
       <React.Fragment>
         <Grid item xs={4} justify="center" alignItems="center">
         <Button variant="contained" color="primary">
-          Hello World
+          בננה
           </Button>
         </Grid>
         <Grid item xs={4} justify="center" alignItems="center">
         <Button variant="contained" color="primary">
-          Hello World
+         מנגו
           </Button>
         </Grid>
         <Grid item xs={4} justify="center" alignItems="center">
         <Button variant="contained" color="primary">
-          Hello World
+          תות
           </Button>
         </Grid>
       </React.Fragment>
     );
   }
 
-  function handleChange(event, newValue) {
-    setValue(newValue);
-  }
-
   return (
-    <div className={classes.root}>
-      <Grid container spacing={10} justify="center" alignItems="center">
-        <Grid container item xs={10} spacing={5} justify="center" alignItems="center">
-          <FormRow />
-        </Grid>
-        <Grid container item xs={10} spacing={5} justify="center" alignItems="center">
-          <FormRow />
-        </Grid>
+<div className={classes.root}>
+      <CssBaseline />
+      <AppBar
+        position="fixed"
+        className={clsx(classes.appBar, {
+          [classes.appBarShift]: open,
+        })}
+      >
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            className={clsx(classes.menuButton, open && classes.hide)}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap>
+            בית אריזה
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        className={classes.drawer}
+        variant="persistent"
+        anchor="left"
+        open={open}
+        classes={{
+          paper: classes.drawerPaper,
+        }}
+      >
+        <div className={classes.drawerHeader}>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+          </IconButton>
+        </div>
+        <Divider />
+        <List>
+          {['הזמנות', 'מלאי'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        {/* <List>
+          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List> */}
+      </Drawer>
+      <main
+        className={clsx(classes.content, {
+          [classes.contentShift]: open,
+        })}
+      >
+        <div className={classes.drawerHeader} />
+        <Grid container spacing={10} justify="center" alignItems="center">
         <Grid container item xs={10} spacing={5} justify="center" alignItems="center">
           <FormRow />
         </Grid>
       </Grid>
-      <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-      <BottomNavigationAction label="Recents" value="recents" icon={<RestoreIcon />} />
-      <BottomNavigationAction label="Favorites" value="favorites" icon={<FavoriteIcon />} />
-      <BottomNavigationAction label="Nearby" value="nearby" icon={<LocationOnIcon />} />
-      <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} />
-    </BottomNavigation>
+      </main>
     </div>
   );
 }
 
-function App() {
-  return (
-    <Grid container direction="row" justify="center" alignItems="center">
-          <Button variant="contained" color="primary">
-          Hello World
-          </Button>
-    </Grid>
-     
-      
-  );
-}
 
 
