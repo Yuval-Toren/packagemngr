@@ -17,8 +17,11 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import HomeIcon from '@material-ui/icons/Home';
+import CardTravelIcon from '@material-ui/icons/CardTravel';
+import BusinessIcon from '@material-ui/icons/Business';
+import Snackbar from '@material-ui/core/Snackbar';
+import CloseIcon from '@material-ui/icons/Close';
 
 const drawerWidth = 240;
 
@@ -26,6 +29,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexGrow: 1,
+    padding: theme.spacing(0.5),
    
   },
   paper: {
@@ -89,6 +93,19 @@ export default function NestedGrid() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [show, setShow] = React.useState(false);
+
+  function handleClick() {
+    setShow(true);
+  }
+
+  function handleClose(event, reason) {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setShow(false);
+  }
 
   function handleDrawerOpen() {
     setOpen(true);
@@ -102,9 +119,34 @@ export default function NestedGrid() {
     return (
       <React.Fragment>
         <Grid item xs={4} justify="center" alignItems="center">
-        <Button variant="contained" color="primary">
-          בננה
-          </Button>
+        <Button variant="contained" color="primary" onClick={handleClick}>בננה</Button>
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        open={show}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        ContentProps={{
+          'aria-describedby': 'message-id',
+        }}
+        message={<span id="message-id">הוספת בננה</span>}
+        action={[
+          <Button key="undo" color="secondary" size="small" onClick={handleClose}>
+            UNDO
+          </Button>,
+          <IconButton
+            key="close"
+            aria-label="close"
+            color="inherit"
+            className={classes.close}
+            onClick={handleClose}
+          >
+            <CloseIcon />
+          </IconButton>,
+        ]}
+      />
         </Grid>
         <Grid item xs={4} justify="center" alignItems="center">
         <Button variant="contained" color="primary">
@@ -159,14 +201,26 @@ export default function NestedGrid() {
           </IconButton>
         </div>
         <Divider />
-        <List>
-          {['הזמנות', 'מלאי'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
+        <List component="nav" aria-label="main app folders">
+        <ListItem button>
+          <ListItemIcon>
+            <HomeIcon />
+          </ListItemIcon>
+          <ListItemText primary="בית" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <CardTravelIcon />
+          </ListItemIcon>
+          <ListItemText primary="הזמנות" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <BusinessIcon />
+          </ListItemIcon>
+          <ListItemText primary="מלאי" />
+        </ListItem>
+      </List>
         <Divider />
         {/* <List>
           {['All mail', 'Trash', 'Spam'].map((text, index) => (
