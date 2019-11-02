@@ -6,6 +6,7 @@ import {
   } from '@devexpress/dx-react-chart-material-ui';
   import Paper from '@material-ui/core/Paper';
   
+  
   const generateData = (start, end, step) => {
     const data = [];
     for (let i = start; i < end; i += step) {
