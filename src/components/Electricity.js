@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-    Chart,
-    LineSeries,
-    SplineSeries,
-  } from '@devexpress/dx-react-chart-material-ui';
+import {Chart,LineSeries,SplineSeries,} from '@devexpress/dx-react-chart-material-ui';
   import Paper from '@material-ui/core/Paper';
-  
   
   const generateData = (start, end, step) => {
     const data = [];
@@ -62,34 +57,3 @@ import {
       );
     }
   }
-
-
-
-
-
-// function Electricity() {
-
-//     return (
-//     <React.Fragment>
-//       <CssBaseline />
-//       <Container maxWidth="sm">
-//       <Paper>
-//         <Chart
-//           data={chartData}
-//         >
-//           <LineSeries
-//             valueField="lineValue"
-//             argumentField="argument"
-//           />
-//           <SplineSeries
-//             valueField="splineValue"
-//             argumentField="argument"
-//           />
-//         </Chart>
-//       </Paper>
-//       </Container>
-//     </React.Fragment>
-//     );
-// }
-
-// export default Electricity;
