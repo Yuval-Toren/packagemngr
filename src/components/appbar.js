@@ -156,7 +156,7 @@ export default function NestedGrid() {
           <ListItemIcon>
             <BusinessIcon />
           </ListItemIcon>
-          <Link to="/Stock">מלאי</Link>
+          <Link to="/Attendance">נוכחות</Link>
         </ListItem>
         <ListItem button>
           <ListItemIcon>

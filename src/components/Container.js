@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import Orders from "./Orders";
 import Electricity from "./Electricity";
+import Attendance from "./Attendance";
 
 function Container() {
     return (
@@ -11,7 +12,7 @@ function Container() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/Orders" component={Orders} />
-            <Route path="/Stock" component={() => <div>Stock</div>} />
+            <Route path="/Attendance" component={Attendance} />
             <Route path="/Electricity" component={Electricity}/>
           </Switch>
       </div>
