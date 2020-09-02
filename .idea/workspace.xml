@@ -53,8 +53,8 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="npm install -g npm" />
-      <command value="npm start" />
       <command value="npm run seed" />
+      <command value="npm start" />
     </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -67,6 +67,7 @@
       <updated>1598955883210</updated>
       <workItem from="1598955885241" duration="2198000" />
       <workItem from="1599032508922" duration="2929000" />
+      <workItem from="1599053418259" duration="483000" />
     </task>
     <task id="LOCAL-00001" summary="Cleared redundant pages, added template for attendance check page and changed site icon and name">
       <created>1599034915034</created>
@@ -91,6 +92,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -102,34 +104,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1599034512904" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1599035962596">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1599053901218">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599035962596" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598958084699" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1599035962596">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599053901218" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1599053901218">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599035962596" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598958084698" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1599035962596">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599053901218" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1599053901218">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599035962596" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598958084698" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1599035962596">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599053901218" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1599053901218">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599035962596" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598958084698" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599053901218" />
     <state x="667" y="76" width="585" height="888" key="find.popup" timestamp="1598957223071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="76" width="585" height="888" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598957223071" />
-    <state x="493" y="190" width="672" height="537" key="run.anything.popup" timestamp="1599035853610">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1599053588052">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="493" y="190" width="672" height="537" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599035853610" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598957961257" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599053588052" />
+    <state x="623" y="225" key="search.everywhere.popup" timestamp="1599053479100">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599053479100" />
   </component>
 </project>
