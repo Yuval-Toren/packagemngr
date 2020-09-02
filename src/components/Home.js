@@ -10,7 +10,7 @@ function Home() {
       <CssBaseline />
       <Container maxWidth="sm">
       <Typography variant="h4" align = 'right' component="h2" gutterBottom>
-          ברוכים הבאים לאפליקציית ארגון בית אריזה
+          ברוכים הבאים
         </Typography>
         <Typography variant="subtitle2" align = 'right' gutterBottom>
           לחצו על הקישורים בצד למעבר בין האפשרויות השונות

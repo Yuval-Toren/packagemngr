@@ -16,7 +16,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import HomeIcon from '@material-ui/icons/Home';
-import CardTravelIcon from '@material-ui/icons/CardTravel';
+//import CardTravelIcon from '@material-ui/icons/CardTravel';
 import BusinessIcon from '@material-ui/icons/Business';
 import { Link } from "react-router-dom";
 
@@ -119,7 +119,7 @@ export default function NestedGrid() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            בית אריזה
+            Flyion
           </Typography>
         </Toolbar>
       </AppBar>
@@ -143,26 +143,13 @@ export default function NestedGrid() {
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
-
           <Link to="/">בית</Link>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <CardTravelIcon />
-          </ListItemIcon>
-          <Link to="/Orders">הזמנות</Link>
         </ListItem>
         <ListItem button>
           <ListItemIcon>
             <BusinessIcon />
           </ListItemIcon>
           <Link to="/Attendance">נוכחות</Link>
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <BusinessIcon />
-          </ListItemIcon>
-          <Link to="/Electricity">חשמל</Link>
         </ListItem>
       </List>
         <Divider />

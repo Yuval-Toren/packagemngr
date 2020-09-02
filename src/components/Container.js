@@ -2,8 +2,8 @@ import React from 'react';
 //import './App.css';
 import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
-import Orders from "./Orders";
-import Electricity from "./Electricity";
+//import Orders from "./Orders";
+//import Electricity from "./Electricity";
 import Attendance from "./Attendance";
 
 function Container() {
@@ -11,9 +11,9 @@ function Container() {
       <div>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/Orders" component={Orders} />
             <Route path="/Attendance" component={Attendance} />
-            <Route path="/Electricity" component={Electricity}/>
+            {/*<Route exact path="/Orders" component={Orders} />*/}
+            {/*<Route path="/Electricity" component={Electricity}/>*/}
           </Switch>
       </div>
     );
