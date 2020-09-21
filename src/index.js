@@ -10,7 +10,7 @@ import Container from "./components/Container";
 
 const App = () => (
     <Router>
-     <div>
+     <div >
         <Header />
         <Container />
      </div>

@@ -25,8 +25,12 @@ const drawerWidth = 240;
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+    alignItems: 'right',
     flexGrow: 1,
     padding: theme.spacing(0.5),
+    ...theme.mixins.toolbar,
+    justifyContent: 'flex-end',
+
    
   },
   paper: {
@@ -35,12 +39,16 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary,
   },
   appBar: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
   },
   appBarShift: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
     transition: theme.transitions.create(['margin', 'width'], {
@@ -63,7 +71,7 @@ const useStyles = makeStyles(theme => ({
   },
   drawerHeader: {
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'right',
     padding: theme.spacing(0, 1),
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
@@ -100,27 +108,34 @@ export default function NestedGrid() {
   }
 
   return (
-<div className={classes.root}>
+<div className={classes.root} >
+
       <CssBaseline />
       <AppBar
+          style={{
+            flexDirection: "row",
+            justifyContent: "flex-end",
+            padding: theme.spacing(0, 1)
+          }}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
       >
         <Toolbar>
+
+          <Typography variant="h6" noWrap>
+            נוכחות
+          </Typography>
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              className={clsx(classes.menuButton, open && classes.hide)}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Flyion
-          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
